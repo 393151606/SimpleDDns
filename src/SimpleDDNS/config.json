@@ -1,0 +1,16 @@
+﻿{
+    "email": "",
+    "password": "",
+    "domains": [
+        {
+            "name": "",
+            "records": [
+                {
+                    "name": "",
+                    "index": 0,
+                    "ip": "intranet"
+                }
+            ]
+        }
+    ]
+}
