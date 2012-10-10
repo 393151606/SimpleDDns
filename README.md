@@ -52,3 +52,8 @@ config.json是JSON格式的配置文件，例如：
 就会自动解析配置的域名到本机
 
 如果需要设置本机启动或者定时刷新，可以使用Windows的计划任务。
+
+参考：
+* DNSPod的 API https://www.dnspod.cn/Support/Api
+* Fastjson http://www.codeproject.com/Articles/159450/fastJSON
+* C#获取外网IP http://blog.163.com/tech_memo/blog/static/64436842201111292753730/
