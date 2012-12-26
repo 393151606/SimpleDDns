@@ -69,7 +69,7 @@ namespace SimpleDDNS
             Config cfg = null;
             if (File.Exists(path))
             {
-                cfg = fastJSON.JSON.Instance.ToObject<Config>(File.ReadAllText(path, Encoding.UTF8));
+                cfg = fastJSON.JSON.Instance.ToObject<Config>(TxtReader.Read(path));
             }
             if (cfg == null)
             {

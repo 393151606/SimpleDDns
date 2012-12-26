@@ -8,6 +8,7 @@ using SimpleDDNS.Clients.Dnspod;
 using System.Net;
 using System.IO;
 using System.Threading;
+using DNSPodClientLite;
 
 namespace SimpleDDNS
 {
@@ -31,16 +32,10 @@ namespace SimpleDDNS
         {
             if (index < 0)
             {
-                string strUrl = "http://www.ip138.com/ip2city.asp"; //获得IP的网址了   
-                Uri uri = new Uri(strUrl);
-                WebRequest wr = WebRequest.Create(uri);
-                Stream s = wr.GetResponse().GetResponseStream();
-                StreamReader sr = new StreamReader(s, Encoding.Default);
-                string all = sr.ReadToEnd(); //读取网站的数据   
-                int i = all.IndexOf("[") + 1;
-                string tempip = all.Substring(i, 15);
-                string ip = tempip.Replace("]", "").Replace(" ", "");
-                return ip;
+                //From DnspodLite
+                IpHelper iptool = new IpHelper(string.Empty);
+                iptool.GetIp(null);
+                return iptool.IP;
             }
             else
             {

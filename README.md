@@ -53,6 +53,11 @@ config.json是JSON格式的配置文件，例如：
 
 如果需要设置本机启动或者定时刷新，可以使用Windows的计划任务。
 
+1.1 202-12-26 Update
+
+* 更新配置文件读取编码自动判断
+* 更新外网IP地址获取方式
+
 参考：
 * DNSPod的 API https://www.dnspod.cn/Support/Api
 * Fastjson http://www.codeproject.com/Articles/159450/fastJSON

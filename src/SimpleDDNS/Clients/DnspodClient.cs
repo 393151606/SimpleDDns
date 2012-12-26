@@ -8,7 +8,7 @@ namespace SimpleDDNS.Clients.Dnspod
 {
     public class DnspodClient
     {
-        const string USER_AGENT = "SimpleDDNS 1.0 (shootsoft@qq.com)";
+        const string USER_AGENT = "SimpleDDNS 1.0 ({0})";
         FastJSONClient client;
 
         public string login_email = string.Empty;
@@ -22,7 +22,7 @@ namespace SimpleDDNS.Clients.Dnspod
             login_email = email;
             login_password = password;
             client = new FastJSONClient();
-            client.UserAgent = USER_AGENT;
+            client.UserAgent = string.Format(USER_AGENT, email);
         }
 
 
